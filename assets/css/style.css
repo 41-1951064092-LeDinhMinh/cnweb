@@ -1,0 +1,54 @@
+/* Style for login.html */
+.login-page{
+    background: url('../img/loginbg.gif') no-repeat center/cover;
+    height: 100vh;
+}
+
+.login-form-container{
+    align-items: center;
+    display: flex;
+    height: 100vh;
+}
+
+
+.form-signin{
+    padding: 20px;
+    background-color: #fff;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgb(0,0,0,0.3);
+}
+
+.form-signin{
+    width: 400px;
+    max-width: 400px;
+}
+
+.description-container{
+    display: flex;
+    height: 100vh;
+}
+
+.description{
+    margin: auto;
+}
+
+.description{
+    color: #fff;
+}
+
+
+.main-navbar{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+@media (max-width:767px){
+    .login-left{
+        display: none;
+    }
+}
+

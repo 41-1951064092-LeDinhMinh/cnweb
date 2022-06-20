@@ -1,0 +1,646 @@
+/* CSS for all */
+body{
+  background-color: rgb(218, 224, 226);
+}
+
+
+/* Animation */
+@-webkit-keyframes rung-lac {
+  0% {
+    -webkit-transform: rotate(0) scale(1) skew(1deg);
+  }
+  10% {
+    -webkit-transform: rotate(-25deg) scale(1) skew(1deg);
+  }
+  20% {
+    -webkit-transform: rotate(25deg) scale(1) skew(1deg);
+  }
+  30% {
+    -webkit-transform: rotate(-25deg) scale(1) skew(1deg);
+  }
+  40% {
+    -webkit-transform: rotate(25deg) scale(1) skew(1deg);
+  }
+  50% {
+    -webkit-transform: rotate(0) scale(1) skew(1deg);
+  }
+  100% {
+    -webkit-transform: rotate(0) scale(1) skew(1deg);
+  }
+}
+
+
+
+/* =================== CSS for login page ====================== */
+.login-section{
+  background-image: linear-gradient(#0f0c29, #302b63, #24243e);
+}
+
+.btn-login{
+  background-image: linear-gradient(#0f0c29, #302b63, #24243e);
+  box-shadow: 5px 2px 2px #888888;
+  color: white;
+  border-radius: 20px;
+  transition: transform 1s ease;
+}
+
+.btn-login:hover{
+  transform: scale(1.1);
+  color: white;
+}
+
+.login-form{
+  background: rgb(205,216,226);
+  background: linear-gradient(236deg, rgba(205,216,226,1) 32%, rgba(165,194,222,1) 39%, rgba(174,207,238,1) 50%, rgba(145,172,197,1) 59%, rgba(104,126,146,1) 100%, rgba(8,13,18,0.10437678489364499) 100%);
+}
+
+.txt-input{
+  border-radius: 20px;
+  box-shadow: 5px 2px 2px #888888;
+}
+
+
+/* =================== CSS for Scroll bar =================== */
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #c0bfbc;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+}
+
+
+
+/* ========================= CSS Sor sidebar and Offcanvas sidebar ============================== */
+
+
+/* Offcanvas */
+.off-sidebar {
+    transition: all 0.5s !important;
+    border-radius: 0;
+    margin-top: 0;
+    margin-left: 0px !important;
+}
+
+
+/* Sidebar responsive */
+@media only screen and (max-width: 768px) {
+    .sidebar {
+      margin-left: -280px !important;
+    }
+  
+    .main-right {
+      margin-left: 10px !important;
+    }
+  
+    .btn-menu {
+      margin-left: -20px !important;
+    }
+  
+    .off-sidebar {
+      margin-left: 0px !important;
+      display: inline !important;
+    }
+}
+
+/* Sidebar scroll bar */
+.sidebar::-webkit-scrollbar {
+    width: 7px;
+    background-color: #f5f5f5;
+}
+  
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: #c0bfbc;
+}
+  
+.sidebar::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #f5f5f5;
+}
+
+
+
+
+
+
+/* ======= Sidebar ====== */
+
+
+/* For toggle sidebar */
+.sidebar.sidebar-show {
+    margin-left: 0px;
+}
+
+
+.sidebar {
+  width: 280px;
+  /* background-color: #303b55; */
+  /* background-color: #1f2535; */
+  /* background-image: linear-gradient(-90deg, #7a613d, #351a2a); */
+  background-image: linear-gradient(-90deg, #4e3e28, #1f1019);
+  height: 100vh;
+  position: fixed;
+  padding: 0;
+  overflow-y: auto;
+  transition: margin 0.5s;
+  margin: 0px 0px 0px -280px;
+  border-radius: 0px;
+}
+
+    /* Sidebar header */
+.sidebar-avatar {
+  text-align: center;
+  margin-top: 30px;
+  color: white;
+}
+.avatar-container {
+  text-align: center;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+    /* Sidebar menu */
+.sidebar-menu ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.sidebar-menu ul li {
+  line-height: 50px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-menu ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  padding-left: 20px;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+  padding-bottom: 0;
+}
+
+.sidebar-menu ul li a.active {
+  background-color: rgb(1, 192, 199);
+}
+
+.sidebar-menu hr {
+  width: 10%;
+  margin: auto;
+}
+
+.sidebar-menu ul li ul {
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-menu ul li ul li a {
+  /* background-color: rgb(245, 216, 166); */
+  font-size: 17px;
+  /* color: #312b2b; */
+  color: white;
+  padding-left: 90px;
+}
+
+.sidebar-menu ul li a:hover {
+  color: rgb(0, 0, 0);
+  background-color: rgb(212, 212, 212);
+}
+
+.sidebar-menu ul li a i {
+  margin-left: 10px;
+  margin-right: 20px;
+  font-size: 25px;
+}
+
+.sidebar-menu ul ul {
+  display: none;
+}
+
+      /* Sidebar menu show items */
+.sidebar-menu ul .user-show.show {
+  background-color: rgb(109, 69, 69);
+  display: block;
+}
+
+.sidebar-menu ul .partner-show.show {
+  background-color: rgb(109, 69, 69);
+  display: block;
+}
+
+
+.sidebar-menu ul .admin-show.show {
+  background-color: rgb(109, 69, 69);
+  display: block;
+}
+
+
+.sidebar-menu ul li a .fa-caret-down {
+  transition: transform 0.5s;
+}
+
+.sidebar-menu ul li a .fa-caret-down.rotate {
+  transform: translateY(-1%) rotate(-180deg);
+}
+
+
+
+/* ====== CSS for footer ====== */
+.footer {
+  top: 90px;
+  position: relative;
+}
+
+.footer p {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+
+
+
+/* ================================= CSS for Main ============================ */
+
+.main {
+  /* background-color: rgb(230, 230, 230); */
+  height: 100vh;
+}
+
+.main-right {
+    position: relative;
+    transition: margin 0.5s;
+    margin: 0px 0px 20px 290px;
+}
+  
+  /* For toggle sidebar */
+.main-right.show {
+    margin-left: 10px;
+}
+
+
+
+
+
+/* =============== CSS for header ================ */
+
+header {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  left: 40px;
+}
+
+.navbar {
+  /* background-image: linear-gradient(-90deg, #d38312, #c03c8b); */
+  background-color: #303b55;
+  background-image: linear-gradient(-90deg, #4e3e28, #1f1019);
+  margin-left: 10px;
+  border-radius: 5px;
+  margin-right: 12px;
+}
+
+.btn-menu {
+  font-size: 20px;
+  background-image: linear-gradient(-90deg, #e4921f, #e24da7);
+  /* background-color: rgb(165, 165, 165); */
+  color: rgba(0, 0, 0, 0.8);
+  border-radius: 30px;
+  padding: 10px 15px;
+  width: 46px;
+  margin-left: -20px;
+  top: 13px;
+  transition: margin 0.5s;
+}
+
+/* .btn-menu:hover{
+    animation: rung-lac 3s ease infinite;
+} */
+
+.btn-menu.hide {
+  margin-left: 260px;
+}
+
+.nav-user-icon {
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+}
+
+
+
+/* =============== CSS for Main content ================== */
+
+/* ----------- CSS for dashboard page -------------- */
+.dashboard-card{
+  height: 150px;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.card-body{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 5px;
+  margin-bottom: 0;
+
+}
+
+.icon{
+  font-size: 50px;
+  color: rgb(26, 27, 27);
+  height: 50px;
+}
+
+.card-title{
+  font-size: 30px;
+  height: 30px;
+}
+
+
+.card-subtitle{
+  padding-left: 17px;
+  font-size: 17px;
+  margin-bottom: 30px;
+}
+
+
+/* ------- ------------- */
+.recent-bills{
+  min-height: 600px;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.recent-users{
+  min-height: 600px;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+
+
+/* ----------- CSS for manage tour page -------------- */
+
+.form-search-tour{
+  height: 180px;
+  padding: 10px;
+  background-color: rgba(245,248,253,255);
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.table-show-tour{
+  min-height: 400px;
+  height: fit-content;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+
+#start-date-tour, #end-date-tour{
+  border-radius: 3px;
+  border: solid;
+  border-width: 0.5px;
+  height: 30px;
+  width: 200px;
+}
+
+#refresh-tour{
+  border-width: 1px;
+  border-radius: 5px;
+  height: 40px;
+  background-color: white;
+}
+
+#search-tour{
+  background-color: #3fc9d5;
+  color: white;
+  border:none;
+  border-radius: 5px;
+  height: 40px;
+}
+
+#export-tour{
+  background-color: rgb(56,124,180);
+  color: white;
+  border:none;
+  border-radius: 5px;
+  height: 40px;
+}
+
+/* ----------- CSS for manage user page -------------- */
+
+.form-search-user{
+  height: 180px;
+  padding: 10px;
+  background-color: rgba(245,248,253,255);
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.table-show-user{
+  min-height: 400px;
+  height: fit-content;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+
+#start-date-user, #end-date-user{
+  border-radius: 3px;
+  border: solid;
+  border-width: 0.5px;
+  height: 30px;
+  width: 200px;
+}
+
+#refresh-user{
+  border-width: 1px;
+  border-radius: 5px;
+  height: 40px;
+  background-color: white;
+}
+
+#search-user{
+  background-color: #3fc9d5;
+  color: white;
+  border:none;
+  border-radius: 5px;
+  height: 40px;
+}
+
+#export-user{
+  background-color: rgb(56,124,180);
+  color: white;
+  border:none;
+  border-radius: 5px;
+  height: 40px;
+}
+
+
+/* ----------- CSS for manage partner page -------------- */
+
+.form-search-partner{
+  height: 180px;
+  padding: 10px;
+  background-color: rgba(245,248,253,255);
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.table-show-partner{
+  min-height: 400px;
+  height: fit-content;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+
+#start-date-partner, #end-date-partner{
+  border-radius: 3px;
+  border: solid;
+  border-width: 0.5px;
+  height: 30px;
+  width: 200px;
+}
+
+#refresh-partner{
+  border-width: 1px;
+  border-radius: 5px;
+  height: 40px;
+  background-color: white;
+}
+
+#search-partner{
+  background-color: #3fc9d5;
+  color: white;
+  border:none;
+  border-radius: 5px;
+  height: 40px;
+}
+
+#export-partner{
+  background-color: rgb(56,124,180);
+  color: white;
+  border:none;
+  border-radius: 5px;
+  height: 40px;
+}
+
+
+
+/* ----------- CSS for manage admin page -------------- */
+
+.form-search-admin{
+  height: 180px;
+  padding: 10px;
+  background-color: rgba(245,248,253,255);
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.table-show-admin{
+  min-height: 400px;
+  height: fit-content;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+
+#start-date-admin, #end-date-admin{
+  border-radius: 3px;
+  border: solid;
+  border-width: 0.5px;
+  height: 30px;
+  width: 200px;
+}
+
+#refresh-admin{
+  border-width: 1px;
+  border-radius: 5px;
+  height: 40px;
+  background-color: white;
+}
+
+#search-admin{
+  background-color: #3fc9d5;
+  color: white;
+  border:none;
+  border-radius: 5px;
+  height: 40px;
+}
+
+#export-admin{
+  background-color: rgb(56,124,180);
+  color: white;
+  border:none;
+  border-radius: 5px;
+  height: 40px;
+}
+
+/* CSS for modal box */
+.modal-confirm {
+  background-color:rgb(231, 231, 231);
+  width: 500px;
+  height: 300px;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.modal-confirm .modal_header {
+  height: 90px;
+  background-color: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px 20px 0 0;
+}
+
+.modal-confirm .modal_header .icon {
+  font-size: 50px;
+  color: white;
+}
+
+.modal-confirm button {
+  font-size: 18px;
+  width: 95px;
+  height: 50px;
+  border-radius: 15px;
+}
+
+.modal-confirm .btn-footer{
+  position: absolute;
+  bottom: 5px;
+}
+
+
+
+
+
+
+

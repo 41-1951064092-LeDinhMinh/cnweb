@@ -1,0 +1,81 @@
+html{
+    scroll-behavior: smooth;
+}
+
+
+/* Styling for navbar */
+.main-navbar{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 2;
+}
+
+
+
+/* Styling for carousel */
+.carousel-inner{
+    position: relative;
+}
+
+.carousel-banner{
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+    bottom: 35px;
+    color: #fff;
+}
+
+
+/* Styling for tour suggest hot */
+.place-hot:hover{
+    opacity: 0.7;
+}
+
+
+
+
+/* Search */
+.search-tour{
+    background: url("../images/tours/search.jpg") center/cover no-repeat;
+    height: 440px;
+    display: flex;
+}
+
+.search-form {
+    display: flex;
+    margin: auto;
+    color: #fff;
+}
+
+
+
+.btn-categories{
+    position: absolute;
+    bottom: 25px;
+    transform: translateX(-50%);
+}
+
+.place-hot-item{
+    position: relative;
+    height: 350px;
+}
+
+.place-hot-content{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+    padding-top: 5px;
+    background: #000;
+    color: #fff;
+}
+
+@media (min-width: 768px){
+    .col-md-5{
+        flex: 0 0 auto;
+        width: 45% !important;
+    }
+}
