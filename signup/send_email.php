@@ -1,6 +1,6 @@
 <?php
 $username = 'ledinhminh53@gmail.com';
-$password = 'fgcqjcznrlghmvly';
+$password = 'ynmy qxcw qlfd aerv';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
